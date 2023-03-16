@@ -163,3 +163,313 @@
   visibility: visible;
   opacity: 1;
 }
+
+/* Part 1 NavBar Style */
+.topnav{
+    background-color: #975d90;
+    overflow: hidden;
+}
+
+.topnav a{
+    float: left;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a.reg{
+    float: right;
+    color: white;
+    margin-top: 5px;
+    
+}
+
+.topnav a.reg:hover{
+    background-color: #0A75BC;
+}
+
+.topnav a.active{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: calc(15px + 1vw);
+}
+/* wala man ata to */
+.topnav .icon{
+    display: none;
+}
+
+/* Part 2 Body */
+
+body,html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    background-size: cover;
+    font-family:"Open Sans", sans-serif;
+}
+
+/* Part 2 Banner style */
+.ban-image{
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../Media/backg.jpg);
+    height: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transition: height 2s;
+}
+
+.ban-image:hover{
+    height: 90%;
+}
+
+.ban-text{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: calc(20px + 1vw);
+    font-weight: 700;
+    color: #29cbfc;
+    text-shadow: 0 0 0.15cm white;
+    user-select: none;
+    white-space: nowrap;
+    filter: blur(.007em);
+
+    animation: bshake 5s linear forwards;
+    animation-iteration-count: infinite;
+}
+
+.ban-text button{
+    border: none;
+    outline: 0;
+    width: 70%;
+    display: inline-block;
+    padding: 10px 25px;
+    color: black;
+    background-color: #29cbfc;
+    text-align: center;
+    cursor: pointer;
+    transition-property: background-color;
+    transition: width 2s;
+    transition-duration: 2s;
+    font-size: large;
+}
+
+.ban-text button:hover{
+    background-color: #29cbfc;
+    color: white;
+    width: 100%;
+}
+
+
+/* Part 3 Animation */
+div.text-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+h1{
+    text-align: center;
+    position: relative;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: calc(20px + 5vw);
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-shadow: 0 0 0.15em #f080e1;
+    user-select: none;
+    white-space: nowrap;
+    filter: blur(0.007em);
+    animation: shake 1s linear forwards;
+    animation-iteration-count: infinite;
+}
+
+h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    clip-path: polygon(10% 0%, 44% 0%, 70% 100%, 55% 100%);
+    -webkit-clip-path: polygon(10% 0%, 44% 0%, 70% 100%, 55% 100%);
+}
+
+h1::before,h1::after{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+h1::before{
+    animation: crack1 2.5s linear forwards;
+    clip-path:  polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
+    -webkit-clip-path:  polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
+}
+
+h1::after{
+    animation: crack2 2.5s linear forwards;
+    clip-path:  polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
+    -webkit-clip-path:  polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
+}
+
+/* Part 4 Embedded Video */
+div.videotext{
+    text-align: center;
+    position: relative;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: calc(20px + 1vw);
+    font-weight: 700;
+    color: #29cbfc;
+    text-shadow: 0 0 0.15em gray;
+    user-select: none;
+    white-space: nowrap;
+    filter: blur(0.007em);
+    
+    animation: shake 5s linear forwards;
+    animation-iteration-count: infinite;
+    border: 0.5px solid #0A75BC;
+    margin-top: 5px;
+    box-shadow: 3px 3px 3px #2ee6e6;
+    -webkit-box-shadow: 3px 3px 3px #2ee6e6;
+    -moz-box-shadow: 3px 3px 3px #2ee6e6;
+    -o-box-shadow: 3px 3px 3px #2ee6e6;
+}
+
+/* bshake anim for bantext */
+@keyframes bshake {
+    5%, 15%, 25%, 35%, 55%, 65%, 75%, 95%{
+        filter: blur(0.018em);
+    }
+    10%, 30%, 40%, 50%, 70%, 80%, 90%{
+        filter: blur(0.01em);
+    }
+    20%, 60%{
+        filter: blur(0.03em);
+    }
+    45%, 85%{
+        filter: blur(0.03em);
+    }
+    100%{
+        filter: blur(0.007em);
+        }
+}
+
+/* crack1anim */
+@keyframes crack1.1 {
+    0%, 95%{
+        transform: translate(-50%, -50%);
+    }
+
+    100%{
+        transform: translate(-51%, -48%)
+    }
+}
+
+/* crack2anim */
+@keyframes crack2.1 {
+    0%, 95%{
+        transform: translate(-50%, -50%);
+    }
+
+    100%{
+        transform: translate(-49%, -53%)
+    }
+}
+
+@keyframes shake.1{
+    5%, 15%, 25%, 35%, 55%, 65%, 75%, 95%{
+        filter: blur(0.018em);
+        transform: translate(0.018em) rotate(0deg);
+    }
+
+    10%, 30%, 40%, 50%, 70%, 80%, 90%{
+        filter: blur(0.01em);
+        transform: translate(-0.01em) rotate(0deg);
+    }
+
+    20%, 60%{
+        filter: blur(0.03em);
+        transform: translate(-0.018em, 0.018em) rotate(0deg);
+    }
+    45%, 85%{
+    filter: blur(0.03em);
+    transform: translate(0.018em, -0.018em) rotate(0deg);
+}
+    100%{
+        filter: blur(0.007em);
+        transform: translate(0) rotate(-0.5deg);
+    }
+}
+
+.columns.1{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 5px 5px;
+}
+
+.column.1{
+    flex: 1;
+    border: 0.5 solid #2ee6e6;
+    margin : 5px;
+    padding: 10px;
+    height: auto;
+    box-shadow: 3px 5px 5px #2ee6e6;
+    -webkit-box-shadow: 3px 5px 5px #2ee6e6;
+}
+
+.column iframe:hover{
+    transition: transform 1s;
+    transform: scale(1.07);
+    opacity: 0.7;
+}
+
+
+@media screen and (max-width:960px){
+    .footer-container{
+        max-width: 600px;
+        background: white;
+    }
+    .ban-image.1{
+        background: black;
+        height: 35%;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        transition: height 2s;
+    }
+    .ban-image:hover{
+        height: 40%;
+    }
+
+
+    .topnav a:not(:first-child){display: none;}
+    .topnav a.icon{
+        float: right;
+        display: block;
+    }
+    .topnav.responsive{position: relative;}
+    .topnav.responsive a.icon{
+        position: absolute;
+        right: 0;
+        top:  0;
+    }
+    .topnav.responsive a{
+        float: none;
+        display: block;
+        text-align: left;
+        
+    }
+}
