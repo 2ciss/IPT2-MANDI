@@ -29,3 +29,35 @@
         <h1 data-text="OurFavoriteSong"><span>OurFavoriteSong</span></h1>
     </div>
     </br>
+  <!-- Part 4 Embedded Video -->
+        <section class="columns">
+            <div class="column">
+                <iframe width="100%" height="200px" src="https://www.youtube-nocookie.com/embed/Er7biNElqZI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="videotext">
+                EFRAEM'S FAVORITE SONG
+            </div></div>
+            
+            <div class="column">
+                <iframe width="100%" height="200px" src="https://www.youtube-nocookie.com/embed/hT_nvWreIhg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                
+                <div class="videotext">
+                VON'S FAVORITE SONG
+            </div></div>
+        </section>
+        
+    </br>
+
+        <section class="columns">
+            <div class="column">
+                <iframe width="100%" height="200px" src="https://www.youtube-nocookie.com/embed/WOQ1t_u8HTw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                
+                <div class="videotext">
+                JEFFERSON'S FAVORITE SONG 
+            </div></div>
+            
+            <div class="column">
+                <iframe width="100%" height="200px" src="https://www.youtube-nocookie.com/embed/PW8rbV7HnfE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="videotext">
+                ZACKARY'S FAVORITE SONG
+            </div></div>
+            
+        </section>
+<br>
