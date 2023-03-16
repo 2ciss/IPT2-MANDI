@@ -23,3 +23,9 @@
             <h2>MAhGEngGeng</h2>
         </div>
     </div>
+    
+<!-- Part 3 Animation -->
+    <div class="text-container">
+        <h1 data-text="OurFavoriteSong"><span>OurFavoriteSong</span></h1>
+    </div>
+    </br>
